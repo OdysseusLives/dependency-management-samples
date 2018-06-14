@@ -18,15 +18,15 @@ buildScan {
 
 dependencies {
     implementation("com.acme:testA:1")
-    implementation("com.acme:testB:+")
-
-    /*
-    {
-        attributes {
-            attribute(LIFECYCLE_ATTRIBUTE, objects.named(Lifecycle::class.java, "DEPRECATED"))
+    if (project.hasProperty("deprecated")) {
+        implementation("com.acme:testB:+") {
+            attributes {
+                attribute(LIFECYCLE_ATTRIBUTE, objects.named(Lifecycle::class.java, "DEPRECATED"))
+            }
         }
+    } else {
+        implementation("com.acme:testB:+")
     }
-    */
 }
 
 // Below is just helpers for the sake of the demo

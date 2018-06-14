@@ -1,0 +1,23 @@
+> Task :insight
+com.acme:testA:1
+   variant "api" [
+      org.gradle.usage             = java-api
+      org.gradle.status            = integration (not requested)
+      org.example.gradle.lifecycle = ALIVE
+   ]
+\--- compileClasspath
+
+com.acme:testB:2
+   variant "api" [
+      org.gradle.usage             = java-api
+      org.gradle.status            = integration (not requested)
+      org.example.gradle.lifecycle = ALIVE
+   ]
+
+com.acme:testB:+ -> 2
+   variant "api" [
+      org.gradle.usage             = java-api
+      org.gradle.status            = integration (not requested)
+      org.example.gradle.lifecycle = ALIVE
+   ]
+\--- compileClasspath

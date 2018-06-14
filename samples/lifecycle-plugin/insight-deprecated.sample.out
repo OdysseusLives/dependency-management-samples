@@ -1,0 +1,24 @@
+> Task :insight
+Configuration compileClasspath resolved a deprecated module: com.acme:testB:3
+com.acme:testA:1
+   variant "api" [
+      org.gradle.usage             = java-api
+      org.gradle.status            = integration (not requested)
+      org.example.gradle.lifecycle = ALIVE
+   ]
+\--- compileClasspath
+
+com.acme:testB:3
+   variant "api" [
+      org.gradle.usage             = java-api
+      org.gradle.status            = integration (not requested)
+      org.example.gradle.lifecycle = DEPRECATED (compatible with: ALIVE)
+   ]
+
+com.acme:testB:+ -> 3
+   variant "api" [
+      org.gradle.usage             = java-api
+      org.gradle.status            = integration (not requested)
+      org.example.gradle.lifecycle = DEPRECATED (compatible with: ALIVE)
+   ]
+\--- compileClasspath

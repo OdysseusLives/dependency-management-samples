@@ -1,0 +1,15 @@
+runtimeClasspath - Runtime classpath of source set 'main'.
++--- org.springframework:spring-beans:4.3.12.RELEASE
+|    \--- org.springframework:spring-core:4.3.12.RELEASE
+|         \--- commons-logging:commons-logging:1.2
++--- org.springframework:spring-context:4.3.12.RELEASE
+|    +--- org.springframework:spring-aop:4.3.12.RELEASE
+|    |    +--- org.springframework:spring-beans:4.3.12.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.12.RELEASE (*)
+|    +--- org.springframework:spring-beans:4.3.12.RELEASE (*)
+|    +--- org.springframework:spring-core:4.3.12.RELEASE (*)
+|    \--- org.springframework:spring-expression:4.3.12.RELEASE
+|         \--- org.springframework:spring-core:4.3.12.RELEASE (*)
++--- org.springframework:spring-core:4.3.12.RELEASE (*)
++--- commons-collections:commons-collections:3.2.1
+\--- commons-codec:commons-codec:1.6
