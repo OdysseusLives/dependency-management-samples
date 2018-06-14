@@ -24,7 +24,7 @@ import org.gradle.samples.test.runner.SamplesRoot
 import org.junit.runner.RunWith
 
 @RunWith(GradleSamplesRunner.class)
-@SamplesRoot("use-cases")
+@SamplesRoot("samples")
 @SamplesOutputNormalizers([JavaObjectSerializationOutputNormalizer.class, FileSeparatorOutputNormalizer.class])
 class UseCasesSamplesIntegrationTest {
 }

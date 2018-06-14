@@ -1,0 +1,5 @@
+Execution failed for task ':consumer:dependencies'.
+> Could not resolve all dependencies for configuration ':consumer:default'.
+   > Module 'org.slf4j:slf4j-jdk14' has been rejected:
+        Dependency path 'incompatible-constraints:consumer:unspecified' --> 'org.apache.cxf:cxf-rt-transports-http-jetty:2.0.9' --> 'org.slf4j:slf4j-jdk14' prefers '1.3.1'
+        Constraint path 'incompatible-constraints:consumer:unspecified' --> 'incompatible-constraints:logging:unspecified' --> 'org.slf4j:slf4j-jdk14' rejects all versions
