@@ -1,0 +1,85 @@
+{
+  "formatVersion": "0.4",
+  "component": {
+    "group": "org.example",
+    "module": "leaf-bar",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "4.8",
+      "buildId": "jucrzqhdhng2zfahbanzxbnlxi"
+    }
+  },
+  "variants": [
+    {
+      "name": "runtime",
+      "attributes": {
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.example",
+          "module": "base-foo",
+          "version": {
+            "prefers": "1.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.example",
+          "module": "leaf-baz",
+          "version": {
+            "prefers": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "leaf-bar-1.0.jar",
+          "url": "leaf-bar-1.0.jar",
+          "size": 686,
+          "sha1": "92e3ee0716aa82d549734188ae93867bd5107a71",
+          "md5": "853b0057fc74ff51695be61be261aabc"
+        }
+      ]
+    },
+    {
+      "name": "api",
+      "attributes": {
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.example",
+          "module": "base-foo",
+          "version": {
+            "prefers": "1.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.example",
+          "module": "leaf-baz",
+          "version": {
+            "prefers": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "leaf-bar-1.0.jar",
+          "url": "leaf-bar-1.0.jar",
+          "size": 686,
+          "sha1": "92e3ee0716aa82d549734188ae93867bd5107a71",
+          "md5": "853b0057fc74ff51695be61be261aabc"
+        }
+      ]
+    }
+  ]
+}

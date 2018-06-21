@@ -1,0 +1,9 @@
+## Alignment with published constraints
+
+This sample shows how one would configure a build to produce a set of libraries that need to be aligned on the same version.
+
+The libraries are produced through a multi project build in `aligned`.
+
+The consuming sample is in `consumer`.
+
+The `repo` contains 4 versions of the libraries: `1.0`, `1.1`, `1.2`, `2.0`.

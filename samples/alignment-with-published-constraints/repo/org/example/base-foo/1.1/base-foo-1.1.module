@@ -1,0 +1,49 @@
+{
+  "formatVersion": "0.4",
+  "component": {
+    "group": "org.example",
+    "module": "base-foo",
+    "version": "1.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "4.8",
+      "buildId": "tl5wwkf5knektm7d7hd2bvjvki"
+    }
+  },
+  "variants": [
+    {
+      "name": "runtime",
+      "attributes": {
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "base-foo-1.1.jar",
+          "url": "base-foo-1.1.jar",
+          "size": 689,
+          "sha1": "ef0258ffbaccf24a11479b15ae833b431ed76ef7",
+          "md5": "39321dd4edebc251a7b8463a1da20167"
+        }
+      ]
+    },
+    {
+      "name": "api",
+      "attributes": {
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "base-foo-1.1.jar",
+          "url": "base-foo-1.1.jar",
+          "size": 689,
+          "sha1": "ef0258ffbaccf24a11479b15ae833b431ed76ef7",
+          "md5": "39321dd4edebc251a7b8463a1da20167"
+        }
+      ]
+    }
+  ]
+}

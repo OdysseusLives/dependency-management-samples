@@ -1,0 +1,85 @@
+{
+  "formatVersion": "0.4",
+  "component": {
+    "group": "org.example",
+    "module": "leaf-baz",
+    "version": "2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "4.8",
+      "buildId": "f7rhmo7ccbaxxh3hhrpyph5tzy"
+    }
+  },
+  "variants": [
+    {
+      "name": "runtime",
+      "attributes": {
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.example",
+          "module": "base-foo",
+          "version": {
+            "prefers": "2.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.example",
+          "module": "leaf-bar",
+          "version": {
+            "prefers": "2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "leaf-baz-2.0.jar",
+          "url": "leaf-baz-2.0.jar",
+          "size": 687,
+          "sha1": "a8f5d1f05e382783892e72e123b5e57462a07204",
+          "md5": "d1d42cfb067150f23f4589a92224277f"
+        }
+      ]
+    },
+    {
+      "name": "api",
+      "attributes": {
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.example",
+          "module": "base-foo",
+          "version": {
+            "prefers": "2.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.example",
+          "module": "leaf-bar",
+          "version": {
+            "prefers": "2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "leaf-baz-2.0.jar",
+          "url": "leaf-baz-2.0.jar",
+          "size": 687,
+          "sha1": "a8f5d1f05e382783892e72e123b5e57462a07204",
+          "md5": "d1d42cfb067150f23f4589a92224277f"
+        }
+      ]
+    }
+  ]
+}
