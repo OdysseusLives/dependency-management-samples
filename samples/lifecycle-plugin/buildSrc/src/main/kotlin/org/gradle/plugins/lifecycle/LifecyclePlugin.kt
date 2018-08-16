@@ -13,7 +13,7 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
         configureSchema()
         configureDefaultLifecycle()
         configureGraphValidation()
-        configureDeprecationsAndBlacklists(this)
+        configureLifecycle()
     }
 
     private
@@ -56,10 +56,22 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
         }
     }
 
-    private fun configureDeprecationsAndBlacklists(project: Project) {
+    private fun Project.configureLifecycle() {
+        project.dependencies.markAllAlive()
+
         // this could come from an external service
         project.dependencies.deprecate("com.acme:testB", "3")
         project.dependencies.blacklist("com.acme:testB", "4")
+    }
+
+    private fun DependencyHandler.markAllAlive() {
+        components.all {
+            allVariants {
+                attributes {
+                    attribute(LIFECYCLE_ATTRIBUTE, lifecycle(ALIVE))
+                }
+            }
+        }
     }
 
     private fun DependencyHandler.deprecate(module: String, version: String) {
