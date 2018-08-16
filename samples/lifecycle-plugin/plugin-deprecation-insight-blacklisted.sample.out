@@ -1,0 +1,24 @@
+> Configure project :
+Module versions
+  - testA
+    - Version 3 has attributes {org.gradle.status=integration}
+    - Version 2 has attributes {org.gradle.status=integration}
+    - Version 1 has attributes {org.gradle.status=integration}
+  - testB
+    - Version 4 has attributes {org.gradle.status=integration}
+    - Version 3 has attributes {org.gradle.status=integration}
+    - Version 2 has attributes {org.gradle.status=integration}
+    - Version 1 has attributes {org.gradle.status=integration}
+
+> Task :insight FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':insight'.
+> Configuration compileClasspath resolved a blacklisted module: com.acme:testB:4
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org

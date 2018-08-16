@@ -3,10 +3,7 @@
   "component": {
     "group": "com.acme",
     "module": "testA",
-    "version": "2",
-    "attributes": {
-      "org.example.gradle.lifecycle": "ALIVE"
-    }
+    "version": "2"
   },
   "variants": [
     {

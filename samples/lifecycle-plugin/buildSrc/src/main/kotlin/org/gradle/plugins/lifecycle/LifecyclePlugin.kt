@@ -2,6 +2,7 @@ package org.gradle.plugins.lifecycle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.api.model.ObjectFactory
 import javax.inject.Inject
 
@@ -12,6 +13,7 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
         configureSchema()
         configureDefaultLifecycle()
         configureGraphValidation()
+        configureDeprecationsAndBlacklists(this)
     }
 
     private
@@ -48,6 +50,36 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
                         if (it == DEPRECATED) {
                             logger.warn("Configuration $configName resolved a deprecated module: $id")
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun configureDeprecationsAndBlacklists(project: Project) {
+        // this could come from an external service
+        project.dependencies.deprecate("com.acme:testB", "3")
+        project.dependencies.blacklist("com.acme:testB", "4")
+    }
+
+    private fun DependencyHandler.deprecate(module: String, version: String) {
+        components.withModule(module) {
+            if (id.version == version) {
+                allVariants {
+                    attributes {
+                        attribute(LIFECYCLE_ATTRIBUTE, lifecycle(DEPRECATED))
+                    }
+                }
+            }
+        }
+    }
+
+    private fun DependencyHandler.blacklist(module: String, version: String) {
+        components.withModule(module) {
+            if (id.version == version) {
+                allVariants {
+                    attributes {
+                        attribute(LIFECYCLE_ATTRIBUTE, lifecycle(BLACKLISTED))
                     }
                 }
             }

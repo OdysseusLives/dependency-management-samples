@@ -3,10 +3,7 @@
   "component": {
     "group": "com.acme",
     "module": "testB",
-    "version": "3",
-    "attributes": {
-      "org.example.gradle.lifecycle": "DEPRECATED"
-    }
+    "version": "3"
   },
   "variants": [
     {

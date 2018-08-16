@@ -24,6 +24,12 @@ dependencies {
                 attribute(LIFECYCLE_ATTRIBUTE, objects.named(Lifecycle::class.java, "DEPRECATED"))
             }
         }
+    } else if (project.hasProperty("blacklisted")) {
+        implementation("com.acme:testB:+") {
+            attributes {
+                attribute(LIFECYCLE_ATTRIBUTE, objects.named(Lifecycle::class.java, "BLACKLISTED"))
+            }
+        }
     } else {
         implementation("com.acme:testB:+")
     }
