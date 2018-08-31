@@ -66,10 +66,8 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
 
     private fun DependencyHandler.markAllAlive() {
         components.all {
-            allVariants {
-                attributes {
-                    attribute(LIFECYCLE_ATTRIBUTE, lifecycle(ALIVE))
-                }
+            attributes {
+                attribute(LIFECYCLE_ATTRIBUTE, lifecycle(ALIVE))
             }
         }
     }
@@ -77,10 +75,8 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
     private fun DependencyHandler.deprecate(module: String, version: String) {
         components.withModule(module) {
             if (id.version == version) {
-                allVariants {
-                    attributes {
-                        attribute(LIFECYCLE_ATTRIBUTE, lifecycle(DEPRECATED))
-                    }
+                attributes {
+                    attribute(LIFECYCLE_ATTRIBUTE, lifecycle(DEPRECATED))
                 }
             }
         }
@@ -89,10 +85,8 @@ open class LifecyclePlugin @Inject constructor(private val objectFactory: Object
     private fun DependencyHandler.blacklist(module: String, version: String) {
         components.withModule(module) {
             if (id.version == version) {
-                allVariants {
-                    attributes {
-                        attribute(LIFECYCLE_ATTRIBUTE, lifecycle(BLACKLISTED))
-                    }
+                attributes {
+                    attribute(LIFECYCLE_ATTRIBUTE, lifecycle(BLACKLISTED))
                 }
             }
         }
